@@ -28,10 +28,14 @@ body {
 }
 
 .logo-small {
-    height: 70px;
+    height: 3.5em;
     width: 61px;
     margin: auto 0;
+    display: inline-block;
     background-image: url("../../images/logoSmall.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
 }
 
 header.alt .logo-small {
@@ -67,4 +71,47 @@ section#one {
 
 .content ul li {
     padding: 0;
+}
+
+@media (max-width: 850px) {
+    #banner {
+        height: 50vh;
+    }
+
+    #banner img {
+        width: 323px;
+        height: 353px;
+        margin-left: 62px;
+        margin-top: 85px;
+    }
+} 
+
+@media (max-width: 736px) {
+    #banner {
+        height: 40vh;
+    }
+
+    #banner img {
+        margin-top: 55px;
+    }
+
+    .logo-small {
+        height: 2.75em;;
+    }
+}
+
+@media (max-width: 480px) {
+    .wrapper.spotlight:nth-child(2n - 1) .inner {
+        text-align: right;
+    }
+
+    #banner {
+        height: 35vh;
+    }
+
+    #banner img {
+        width: 223px;
+        height: 253px;
+        margin-left: 45px;
+    }
 }
