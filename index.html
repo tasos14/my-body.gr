@@ -193,5 +193,18 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
+
+			<script>
+				var inFrame = (window === window.parent) ? false : true;
+				if (inFrame) {
+					var parent = window.parent.document;
+					parent.title = "My Body";
+
+					var meta = parent.createElement('meta');
+					meta.name = "viewport";
+					meta.content = "width=device-width, initial-scale=1, user-scalable=no";
+					parent.getElementsByTagName('head')[0].appendChild(meta);	
+				}
+			</script>
 	</body>
 </html>
